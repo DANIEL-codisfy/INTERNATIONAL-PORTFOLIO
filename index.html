@@ -1,81 +1,148 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3XEH50V1S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <title>Global Responsive Grid Matrix</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'G-V3XEH50V1S');
-</script>
-    <title>Global Flexbox Storefront</title>
+    <script async src="https://googletagmanager.com"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V3XEH50V1S');
+    </script>
 
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; 
+        }
 
-        .nav-bar{
-            background-color: #333333;
+        .nav-bar {
+            background-color: #1a1a1a;
             color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .store-layout-row{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .product-card{
-            background-color: #f4f4f4;
             padding: 20px;
-            width: 48%;
-            box-sizing: border-box;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); 
         }
 
-        .site-footer{
-            background-color: #e2e2e2;
-            padding: 15px;
-            margin-top: 20px;
+        .store-grid-container {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px; 
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto; 
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-weight: 700;
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .site-footer {
+            background-color: #1a1a1a;
+            color: #999999;
+            padding: 20px;
             text-align: center;
+            margin-top: 60px;
+        }
+    
+        @media (max-width: 768px) {
+            
+            .store-grid-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .nav-bar h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
+</head>
+<body>
 
-    </head>
-    <body>
+    <div class="nav-bar">
+        <h2>Forester International Retail Grid</h2>
+        <p>Dynamic Production Assets | Telemetry Dashboard Connected</p>
+    </div>
 
-        <div class="nav-bar">
-            <h2>Forester International Tech Hub</h2>
-            <p>Anonymous Global Solutions | Real-Time Checkout</p>
+    <div class="store-grid-container">
+
+        <!-- CARD 01 -->
+        <div class="product-card">
+            <h3>Featured Deal 01</h3>
+            <img src="watch.webp" alt="Smart Watch" width="100%">
+            <p><strong>Item:</strong> Amazfit Edition Watch</p>
+            <p>Price: $299</p>
+            <button onclick="alert('Asset 1 added to basket...')">Buy Asset</button>
         </div>
 
-        <div class="store-layout-row">
-
-            <div class="product-card">
-                <h3>Featured Deal 01</h3>
-                <img src="watch.webp" alt="Premium Smart Watch" width="100%"
-                <p><strong>Item:</strong>Amazfit Edition WAtch V2</p>
-                <p>Price :$299(KShs 39,000)</p>
-                <button onclick="alert('Routing to Secured Stripe Server 1...')">Buy Asset</button>
-
-            </div>
-
-            <div class="Product-card">
-                <h3>Featured Deal 02</h3>
-
-                <img src="watch.webp" alt="Premium Smart Watch Copy" width="100%">
-                <p><strong>Item:</strong>Amizfit Pro Sports Tracker</p>
-                <p>Price: $349(KShs 45,300)</p>
-                <button onclick="alert('Routing to Secured Stripe Server 2...')">Buy Asset</button>
-            </div>
-
+        <!-- CARD 02 -->
+        <div class="product-card">
+            <h3>Featured Deal 02</h3>
+            <img src="watch.webp" alt="Smart Watch Copy" width="100%">
+            <p><strong>Item:</strong> Amazfit Pro Tracker</p>
+            <p>Price: $349</p>
+            <button onclick="alert('Asset 2 added to basket...')">Buy Asset</button>
         </div>
 
-        <div class="site footer">
-            <p>© 2026 Forester Tech Store.Architectural layouts coded completely offfline</p>
+        <!-- CARD 03 -->
+        <div class="product-card">
+            <h3>Featured Deal 03</h3>
+            <img src="watch.webp" alt="Smart Watch Upgrade" width="100%">
+            <p><strong>Item:</strong> Amazfit Premium Ultra</p>
+            <p>Price: $499</p>
+            <button onclick="alert('Asset 3 added to basket...')">Buy Asset</button>
         </div>
-         <a href='http://www.freevisitorcounters.com'>Get Visitor Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=0beafc63c4a2d09155e4fa91876b349e820510cf'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1620905/t/6"></script>
-    </body>
+
+        <!-- CARD 04 -->
+        <div class="product-card">
+            <h3>Featured Deal 04</h3>
+            <img src="watch.webp" alt="Smart Watch Elite" width="100%">
+            <p><strong>Item:</strong> Amazfit Stealth Edition</p>
+            <p>Price: $599</p>
+            <button onclick="alert('Asset 4 added to basket...')">Buy Asset</button>
+        </div>
+
+    </div>
+
+    <div class="site-footer">
+        <p>© 2026 Forester Tech Store. Multi-row layout matrices compiled offline.</p>
+    </div>
+
+</body>
 </html>
